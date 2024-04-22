@@ -3,7 +3,7 @@ package de.wweisshaar.multiplatform_translator.core.domain.util
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.StateFlow
 
-actual class CommonStateFlow<T> actual constructor(
+open actual class CommonStateFlow<T> actual constructor(
     private val stateFlow: StateFlow<T>
 ) : CommonFlow<T>(stateFlow), StateFlow<T> {
     override val replayCache: List<T>
