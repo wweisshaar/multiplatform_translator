@@ -2,11 +2,10 @@ package de.wweisshaar.multiplatform_translator.core.domain.util
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.DisposableHandle
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
-actual class CommonFlow<T> actual constructor(
+open actual class CommonFlow<T> actual constructor(
     val flow: Flow<T>
 ) : Flow<T> by flow {
     fun subscribe(
