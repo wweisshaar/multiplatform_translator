@@ -38,7 +38,7 @@ kotlin {
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
             implementation(libs.ktor.core)
-            implementation(libs.ktor.client.serialization)
+            implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
         }
         commonTest.dependencies {
@@ -46,9 +46,11 @@ kotlin {
         }
         androidMain.dependencies {
             implementation(libs.sql.delight.android.driver)
+            implementation(libs.ktor.client.okhttp)
         }
         iosMain.dependencies {
             implementation(libs.sql.delight.native.driver)
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
