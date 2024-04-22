@@ -37,7 +37,8 @@ kotlin {
             implementation(libs.sql.delight.coroutines.extensions)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
-            implementation(libs.ktor.core)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
         }
