@@ -1,8 +1,10 @@
 package de.wweisshaar.multiplatform_translator.translate.data.translate
 
+import kotlinx.serialization.SerialName
+
 @kotlinx.serialization.Serializable
 data class TranslateDto(
-    val textToTranslate: String,
-    val sourceLanguage: String,
-    val targetLanguage: String,
+    @SerialName("q") val textToTranslate: String,
+    @SerialName("source") val sourceLanguageCode: String,
+    @SerialName("target") val targetLanguageCode: String,
 )
