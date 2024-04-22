@@ -37,6 +37,9 @@ kotlin {
             implementation(libs.sql.delight.coroutines.extensions)
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.ktor.core)
+            implementation(libs.ktor.client.serialization)
+            implementation(libs.ktor.serialization.json)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
