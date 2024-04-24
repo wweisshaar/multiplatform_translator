@@ -67,3 +67,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 }
+
+sqldelight {
+    databases {
+        create("TranslateDatabase") {
+            packageName.set("de.wweisshaar.multiplatform_translator.database")
+        }
+
+    }
+}
