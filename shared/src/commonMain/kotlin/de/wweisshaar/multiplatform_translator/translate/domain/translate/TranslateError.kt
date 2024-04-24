@@ -1,6 +1,8 @@
 package de.wweisshaar.multiplatform_translator.translate.domain.translate
 
-enum class TranslateError {
+import de.wweisshaar.multiplatform_translator.core.domain.util.Error
+
+enum class TranslateError: Error {
     SERVICE_UNAVAILABLE,
     CLIENT_ERROR,
     SERVER_ERROR,
