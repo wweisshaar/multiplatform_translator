@@ -29,6 +29,7 @@ class Translate(
             )
             Result.Success(translatedText)
         } catch (e: Exception) {
+            e.printStackTrace()
             if (e is TranslateException) {
                 Result.Error(e.error)
             } else {
