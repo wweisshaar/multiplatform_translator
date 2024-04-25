@@ -28,8 +28,12 @@ class Translate(
                 )
             )
             Result.Success(translatedText)
-        } catch (e: TranslateException) {
-            Result.Error(e.error)
+        } catch (e: Exception) {
+            if (e is TranslateException) {
+                Result.Error(e.error)
+            } else {
+                Result.Error(TranslateError.UNKNOWN_ERROR)
+            }
         }
     }
 }
