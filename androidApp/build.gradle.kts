@@ -48,9 +48,9 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.androidx.activity.compose)
     implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
     debugImplementation(libs.compose.ui.tooling)
     implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.ktor.client.okhttp)
 }
