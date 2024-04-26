@@ -10,12 +10,15 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -54,15 +57,17 @@ fun LanguageDropDown(
             AsyncImage(
                 model = language.drawableResId,
                 contentDescription = language.language.langName,
-                modifier = Modifier.size(30.dp)
+                modifier = Modifier.size(30.dp),
+                contentScale = ContentScale.FillBounds,
             )
-            Spacer(modifier = Modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = language.language.langName,
-                color = LightBlue
+                color = LightBlue,
+                style = MaterialTheme.typography.bodyMedium
             )
             Icon(
-                imageVector = if (isOpen) Icons.Default.ArrowDropDown else Icons.Default.ArrowDropDown,
+                imageVector = if (isOpen) Icons.Default.KeyboardArrowUp else Icons.Default.ArrowDropDown,
                 contentDescription = if (isOpen) {
                     stringResource(id = R.string.close)
                 } else {
