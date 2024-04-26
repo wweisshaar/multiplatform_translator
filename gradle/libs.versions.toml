@@ -12,6 +12,7 @@ ktor = "2.3.9"
 coroutines = "1.8.0"
 daggerHilt = "2.51.1"
 hiltNavigation = "1.2.0"
+coilCompose = "2.1.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -23,6 +24,8 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+#Coil - Compose
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 #SQL - Delight
 sql-delight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqlDelight" }
 sql-delight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqlDelight" }
