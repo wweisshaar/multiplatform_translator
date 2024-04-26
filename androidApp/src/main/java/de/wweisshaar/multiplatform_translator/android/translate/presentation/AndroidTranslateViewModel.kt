@@ -1,4 +1,4 @@
-package de.wweisshaar.multiplatform_translator.android.presentation
+package de.wweisshaar.multiplatform_translator.android.translate.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
