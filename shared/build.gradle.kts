@@ -73,6 +73,5 @@ sqldelight {
         create("TranslateDatabase") {
             packageName.set("de.wweisshaar.multiplatform_translator.database")
         }
-
     }
 }
