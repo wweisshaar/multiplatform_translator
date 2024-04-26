@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		7CFCCCFFC9846080451CE311 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE02056E68113C724BAD5E8A /* Pods_iosApp.framework */; };
+		EAAB26202BDB8BB400C209FD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAB261F2BDB8BB400C209FD /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D0510F82A80B136CB1805DC /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF6DBC5F83D6DDD0BEAC547A /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		CE02056E68113C724BAD5E8A /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAAB261F2BDB8BB400C209FD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAAB26202BDB8BB400C209FD /* libsqlite3.tbd in Frameworks */,
 				7CFCCCFFC9846080451CE311 /* Pods_iosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,13 +55,13 @@
 				7D0510F82A80B136CB1805DC /* Pods-iosApp.debug.xcconfig */,
 				AF6DBC5F83D6DDD0BEAC547A /* Pods-iosApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		5ECF803B37B3BE1749B084BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAAB261F2BDB8BB400C209FD /* libsqlite3.tbd */,
 				CE02056E68113C724BAD5E8A /* Pods_iosApp.framework */,
 			);
 			name = Frameworks;
