@@ -1,7 +1,7 @@
 package de.wweisshaar.multiplatform_translator.android.translate.presentation.components
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.Icon
@@ -35,7 +34,12 @@ fun LanguageDropDown(
     onSelectLanguage: (UiLanguage) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(modifier = modifier) {
+    BoxWithConstraints(modifier = modifier) {
+        val textStyle = when (maxWidth) {
+            in 0.dp..320.dp -> MaterialTheme.typography.labelMedium
+            in 321.dp..480.dp -> MaterialTheme.typography.bodyMedium
+            else -> MaterialTheme.typography.bodyMedium
+        }
         DropdownMenu(
             expanded = isOpen,
             onDismissRequest = onDismiss
@@ -64,10 +68,10 @@ fun LanguageDropDown(
             Text(
                 text = language.language.langName,
                 color = LightBlue,
-                style = MaterialTheme.typography.bodyMedium
+                style = textStyle
             )
             Icon(
-                imageVector = if (isOpen) Icons.Default.KeyboardArrowUp else Icons.Default.ArrowDropDown,
+                imageVector = if (isOpen) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowUp,
                 contentDescription = if (isOpen) {
                     stringResource(id = R.string.close)
                 } else {
