@@ -2,11 +2,11 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	let greet = Greeting().greet()
-
-	var body: some View {
-		Text(greet)
-	}
+    private let appModule = AppModule()
+        
+        var body: some View {
+            TranslateScreen(hisoryDataSource: appModule.historyDataSource, translateUsesCase: appModule.translateUseCase)
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
