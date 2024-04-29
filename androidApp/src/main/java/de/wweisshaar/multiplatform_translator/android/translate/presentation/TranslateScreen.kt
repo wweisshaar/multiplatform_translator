@@ -23,15 +23,17 @@ fun TranslateScreen(
     onEvent: (TranslateEvent) -> Unit
 ) {
     Scaffold(floatingActionButton = {}) { padding ->
-        LazyColumn(modifier = Modifier
-            .fillMaxSize()
-            .padding(padding)
-            .padding(16.dp),
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             item {
-                Row(modifier = Modifier
-                    .fillMaxWidth(),
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
@@ -39,18 +41,18 @@ fun TranslateScreen(
                         language = state.fromLanguage,
                         isOpen = state.isChoosingFromLanguage,
                         onClick = { onEvent(TranslateEvent.OpenFromLanguageDropDown) },
-                        onDismiss = { onEvent(TranslateEvent.StopChoosingLanguage)},
-                        onSelectLanguage = { onEvent(TranslateEvent.ChooseFromLanguage(it))}
+                        onDismiss = { onEvent(TranslateEvent.StopChoosingLanguage) },
+                        onSelectLanguage = { onEvent(TranslateEvent.ChooseFromLanguage(it)) }
                     )
                     Spacer(modifier = Modifier.weight(1f))
-                    SwapLanguagesButton(onClick = { onEvent(TranslateEvent.SwapLanguages)})
+                    SwapLanguagesButton(onClick = { onEvent(TranslateEvent.SwapLanguages) })
                     Spacer(modifier = Modifier.weight(1f))
                     LanguageDropDown(
                         language = state.toLanguage,
                         isOpen = state.isChoosingToLanguage,
                         onClick = { onEvent(TranslateEvent.OpenToLanguageDropDown) },
-                        onDismiss = { onEvent(TranslateEvent.StopChoosingLanguage)},
-                        onSelectLanguage = { onEvent(TranslateEvent.ChooseToLanguage(it))}
+                        onDismiss = { onEvent(TranslateEvent.StopChoosingLanguage) },
+                        onSelectLanguage = { onEvent(TranslateEvent.ChooseToLanguage(it)) }
                     )
                 }
             }
