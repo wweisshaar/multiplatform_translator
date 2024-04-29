@@ -10,7 +10,7 @@ import SwiftUI
 import shared
 
 struct SwapLanguageButton: View {
-    var onClick: () -> Void
+    let onClick: () -> Void
     var body: some View {
         Button(action: onClick) {
             Image(uiImage: UIImage(named: "swap_languages")!)

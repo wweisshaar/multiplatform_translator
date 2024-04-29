@@ -10,9 +10,9 @@ import SwiftUI
 import shared
 
 struct LanguageDropDown: View {
-    var language: UiLanguage
-    var isOpen: Bool
-    var selectLanguage: (UiLanguage) -> Void
+    let language: UiLanguage
+    let isOpen: Bool
+    let selectLanguage: (UiLanguage) -> Void
     
     var body: some View {
         Menu {

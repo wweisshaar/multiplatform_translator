@@ -10,9 +10,9 @@ import SwiftUI
 import shared
 
 struct ProgressButton: View {
-    var text: String
-    var isLoading: Bool
-    var onClick: () -> Void
+    let text: String
+    let isLoading: Bool
+    let onClick: () -> Void
     
     var body: some View {
         Button(

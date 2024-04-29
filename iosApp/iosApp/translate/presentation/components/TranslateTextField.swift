@@ -88,11 +88,11 @@ private extension TranslateTextField {
         }
     }
     struct TranslatedTextField: View {
-        var fromText: String
-        var toText: String
-        var fromLanguage: UiLanguage
-        var toLanguage: UiLanguage
-        var onTranslateEvent: (TranslateEvent) -> Void
+        let fromText: String
+        let toText: String
+        let fromLanguage: UiLanguage
+        let toLanguage: UiLanguage
+        let onTranslateEvent: (TranslateEvent) -> Void
         
         var body: some View {
             VStack(alignment: .leading) {

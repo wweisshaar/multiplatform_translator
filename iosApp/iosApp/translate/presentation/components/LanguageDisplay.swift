@@ -10,7 +10,7 @@ import SwiftUI
 import shared
 
 struct LanguageDisplay: View {
-    var language: UiLanguage
+    let language: UiLanguage
     var body: some View {
         HStack {
             SmallLanguageIcon(language: language)
